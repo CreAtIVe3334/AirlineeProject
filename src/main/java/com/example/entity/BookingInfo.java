@@ -29,7 +29,7 @@ public class BookingInfo {
     private String flightNumber;
     private StatusBooking status;
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "booking_info_detail",joinColumns = {@JoinColumn(name = "passenger_id")},
-    inverseJoinColumns = {@JoinColumn(name = "id")})
+    @JoinTable(name = "booking_info_detail",joinColumns = {@JoinColumn(name = "booking_id" ,referencedColumnName = "id")},
+    inverseJoinColumns = {@JoinColumn(name = "id",referencedColumnName = "id")})
     private List<Passengers> passengers;
 }
