@@ -13,7 +13,8 @@ import javax.validation.constraints.NotEmpty;
 @Data
 @Builder
 @Entity
-class Passengers {
+public
+class Passenger {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;

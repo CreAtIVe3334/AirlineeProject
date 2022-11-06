@@ -31,5 +31,5 @@ public class BookingInfo {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "booking_info_detail",joinColumns = {@JoinColumn(name = "booking_id" ,referencedColumnName = "id")},
     inverseJoinColumns = {@JoinColumn(name = "id",referencedColumnName = "id")})
-    private List<Passengers> passengers;
+    private List<Passenger> passengers;
 }
