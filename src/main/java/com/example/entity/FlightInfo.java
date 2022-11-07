@@ -18,6 +18,6 @@ public class FlightInfo {
     private Integer countSeets;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinTable(name = "Airline_flight_info",joinColumns = {@JoinColumn(name = "id",referencedColumnName = "id")},
-    inverseJoinColumns = {@JoinColumn(name = "id", referencedColumnName = "id")})
+    inverseJoinColumns = {@JoinColumn(name = "Ai_id", referencedColumnName = "id")})
     private Airline airline;
 }

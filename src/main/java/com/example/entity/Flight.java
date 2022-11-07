@@ -22,13 +22,10 @@ public class Flight {
     private LocalTime flightTime;
     private Integer flightNo;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
     private Fare fare;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
     private Inventory inventory;
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
     private FlightInfo flightInfo;
 
 }

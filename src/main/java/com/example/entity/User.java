@@ -4,6 +4,7 @@ import com.example.enums.Gender;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -11,6 +12,7 @@ import javax.persistence.*;
 @Data
 @Builder
 @Entity
+@Table(name = "users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,6 +27,6 @@ public class User {
     @Column(nullable = false)
     private String userName;
     @Column(nullable = false)
-    @NonNull
+    @NotNull
     private String password;
 }
