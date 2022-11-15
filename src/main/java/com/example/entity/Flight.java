@@ -20,7 +20,8 @@ public class Flight {
     private String duration;
     private LocalDate flightDate;
     private LocalTime flightTime;
-    private Integer flightNo;
+    private String flightNo;
+    private String origin;
     @OneToOne(cascade = CascadeType.ALL)
     private Fare fare;
     @OneToOne(cascade = CascadeType.ALL)

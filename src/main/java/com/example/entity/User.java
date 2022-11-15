@@ -5,6 +5,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -29,4 +30,5 @@ public class User {
     @Column(nullable = false)
     @NotNull
     private String password;
+    private BigDecimal money;
 }
